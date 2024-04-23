@@ -1,0 +1,130 @@
+:root {
+
+    /*--background--*/
+    --bg-color1: rgb(12, 99, 139);
+    --bg-color2: #fff;
+    --bg-color3: rgb(2, 117, 185);
+    --bg-color5: #f1f1f1;
+
+    /*-- font color --*/
+    --ft-color1: #222;
+    --ft-color2: #fff;
+    --ft-color3: #000;
+
+
+    /*-- font family --*/
+    --ft-family1: monospace;
+    --ft-family2: sans-serif;
+
+}
+
+
+body {
+    font-family: var(--ft-family1);
+    background-color: var(--bg-color5);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+i {
+    color: var(--ft-color1);
+    margin-right: 2px;
+}
+
+.navbar i {
+    color: var(--ft-color2);
+    margin-right: 2px;
+}
+
+
+
+/*---------------commoon css--------------------*/
+
+/* background */
+.bgColor1 {
+    background-color: var(--bg-color1);
+}
+
+.bgColor2 {
+    background-color: var(--bg-color2);
+}
+
+.bgColor3 {
+    background-color: var(--bg-color3);
+}
+
+
+
+/* font color */
+.ftColor1 {
+    color: var(--ft-color1);
+}
+
+.ftColor2 {
+    color: var(--ft-color2);
+}
+
+.ftColor3 {
+    color: var(--ft-color3);
+}
+
+
+
+/*---------------bootstrap css--------------------*/
+.bs-row>* {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+
+/*------- navbar --------*/
+.bs-navbar-brand {
+    margin-right: 3rem;
+}
+
+.bs-navbar-brand:hover {
+    color: var(--ft-color2);
+    opacity: 0.82;
+}
+
+.bs-nav-item:not(ul .account) {
+    margin-right: 10px;
+}
+
+.bs-nav-item:hover .bs-nav-link {
+    color: var(--ft-color2);
+    opacity: 0.82;
+}
+
+.bs-dropdown-toggle::after {
+    vertical-align: middle !important;
+}
+
+.bs-nav-item .bs-nav-link:focus {
+    color: var(--ft-color2);
+}
+
+.account .bs-dropdown-menu[data-bs-popper] {
+    left: -10px;
+    right: 0 !important;
+}
+
+.dropdown-menu {
+    min-width: 0rem !important;
+}
+
+
+.form {
+    width: 400px;
+}
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
+}
