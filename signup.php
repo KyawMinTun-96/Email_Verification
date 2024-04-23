@@ -2,7 +2,7 @@
 
  include_once "./public/header.php" ?>
 <?php 
-    if(isset($_POST['signup'])) {
+    if(isset($_POST['name'])) {
         $name = trim($_POST['name']);
         $email = trim($_POST['email']);
         $password = trim($_POST['password']);

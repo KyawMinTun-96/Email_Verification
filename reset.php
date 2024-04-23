@@ -2,7 +2,7 @@
 
     include_once "./public/header.php";
 
-    if(!checkSession("name")){
+    if(checkSession("name")){
 
         if(isset($_POST['check'])){
 

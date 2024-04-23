@@ -1,11 +1,13 @@
 <?php 
     include_once "./public/header.php";
 
-    if(isset($_POST['login-now'])){
+    if(checkSession("name")){
 
-        header('Location: login.php');
+        if(isset($_POST['login-now'])){
 
-    }
+            header('Location: login.php');
+
+        }
 ?>
 
 <section class="password_changed">
@@ -32,5 +34,9 @@
 </section>
 
 <?php 
+    }else{
 
+        header("Location: home.php");
+
+    }
 ?>

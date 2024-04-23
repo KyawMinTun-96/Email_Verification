@@ -1,24 +1,26 @@
 <?php 
     include_once "./public/header.php";
 
-    if(isset($_POST['change-password'])){
+    if(checkSession("name")){
 
-        $password = encodePassword(trim($_POST['password']));
-        $cPassword = encodePassword(trim($_POST['cpassword']));
+        if(isset($_POST['change-password'])){
+
+            $password = encodePassword(trim($_POST['password']));
+            $cPassword = encodePassword(trim($_POST['cpassword']));
 
 
-        $ans = changePassword($password, $cPassword);
+            $ans = changePassword($password, $cPassword);
 
-        if($ans === "Correct") {
+            if($ans === "Correct") {
 
-            header('location: password_changed.php');
-            exit();
+                header('location: password_changed.php');
+                exit();
+
+            }
+
+            global $errors;
 
         }
-
-        global $errors;
-
-    }
 
 ?>
 
@@ -59,5 +61,9 @@
 </section>
 
 <?php 
+    }else{
 
+        header("Location: home.php");
+
+    }
 ?>
